@@ -1,0 +1,126 @@
+@font-face {
+  font-family:'OpenSans';
+  src:url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+  font-weight:400;
+  font-style:normal
+}
+@font-face {
+  font-family:'OpenSans';
+  src:url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+  font-weight:700;
+  font-style:normal
+}
+
+body {
+  font-family: 'OpenSans', 'Arial' , 'sans-serif';
+  font-weight: 400;
+  text-decoration: none;
+  list-style: none;
+  color:#000000;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  padding-inline-start: 0;
+  
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+a {
+  text-decoration: none;
+  -webkit-appearance:none;
+  -moz-appearance: none;
+}
+
+h2 {
+  color: #e7e7e7;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 4em;
+  position: relative;
+  
+}
+
+h3 {
+  color: #c1c1c1;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;  
+}
+
+p {
+  font-weight: 400;
+}
+
+main {
+  margin-left: 40px;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+}
+.top, .footer {
+  background-color: #071740;
+  color: #d0d0d0;
+}
+
+.article {
+  list-type-style: decimal;
+  font-weight: 700;
+}
+
+.article1 {
+  background-color: #5e42b0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #ffffff; 
+}
+
+.number2 {
+  box-sizing: border-box;
+  background-color: #5e42b0;
+  width: 100px;
+  height: 100px;
+  font-size: 20px;
+  text-align: center;
+  padding: 30px;
+  
+  color: #ffffff;
+}
+
+.number3 {
+  font-weight: 700;
+}
+.number3:after {
+  content: "";
+  align: left;
+  display: block;
+  margin-top: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  background-color: #8f7bc8;
+  height: 4px; 
+}
+
+.athlets { 
+  background-img: url("https://github.com/netology-code/mq-diploma/blob/master/sources/img/footballer_192.png?raw=true");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+article {
+  position: relative;
+}
+
+.number2 {
+  position: absolute;
+  top: 700px;
+  bottom: 10px;
+  left: 20px
+}
