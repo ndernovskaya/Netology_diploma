@@ -28,7 +28,7 @@ body {
   -moz-appearance: none;
 }
 main, ol, li {
-width: 100%;
+	width: 100%;
 }
 a {
   text-decoration: none;
@@ -55,32 +55,26 @@ h3 {
   font-weight: 700;
   font-size: 23px;
   letter-spacing: 1.5px;
-  padding-top: 82px;
   padding-left: 20px;
   position: relative;
 }
 ol {
   counter-reset: myCounter;
 }
-.list1, .list2 {
-   list-style: none;  
-}
 p {
   font-weight: 400;
-  padding-top: 30px;
-  padding-bottom: 70px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
   font-size: 16px;
   letter-spacing: 0.5px;
   line-height: 20px;
 }
 .logo {
   width: 142px;
-  padding: 40px;
+  padding-top: 40px;
   margin: auto;
 }
 .slogan1 {
+  padding-top: 25vh;
   padding-left: 30px;
   width: 100%;
   line-height: 1;
@@ -88,11 +82,10 @@ p {
 .slogan2 {
   padding-top: 30px;
   padding-left: 100px;
-  padding-bottom: 80px;
   line-height: 1;
 }
 .storebuttons {
-  padding: 10px;
+  padding: 86px 0;
   margin: auto;
 }
 .storebutton1 {
@@ -129,7 +122,6 @@ p {
   color: #ffffff
 }
 .top {
-  font-size: 3em;
   background-image: url("https://github.com/ndernovskaya/Netology_diploma/blob/master/img/football_767.jpg?raw=true");
   background-repeat: no-repeat;
   background-position: center;
@@ -152,15 +144,17 @@ p {
   z-index: 1;
 }
 .section1 {
-  font-weight: 700;
+  font-weight: 700; margin-top: 30px;
   z-index: 1;
   width: 100%;
 }
-.arti {
-  background-color: #fafafa;
+.section1 article {
+ margin-top: 30px;
 }
 .list1, .list2 {
   background-color: #fafafa;
+  padding: 58px 0;
+  list-style: none;  
 }
 .list1:nth-of-type(2n) {
   background-color: #f5f4f9;
@@ -195,6 +189,7 @@ p {
   color: #ffffff;  
 }
 .list2 h3::before {
+  
   content: '0'counter(myCounter);
   counter-increment: myCounter;
   color: #000000;
@@ -212,8 +207,8 @@ p {
     border-color: #ffffff;
 	color: #5e42b0;
 }
-.footballer h2, .basketballer h2 {
-  padding-bottom: 251px; 
+.section1 h2 {
+  padding-bottom: 40vh; 
 }
 .footballer, .basketballer {
   position: relative;
@@ -223,34 +218,37 @@ p {
   position: absolute;
   content: "";
   padding: 40px 10px;
-  height: 257px;
-  color: red;
+  width: 100%;
+  height: 35vh;
   background-image: url("https://github.com/ndernovskaya/Netology_diploma/blob/master/img/footballer_192.png?raw=true");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto auto;
-  z-index: 3;
+  background-size: contain;
+  z-index: 2; 
   top: 50px;
-  left: 0px;
+  left: 0;
   right: 0;
   bottom: 0;  
 }
 .basketballer::after {
   position: absolute;
   content: "";
-  height: 275px;
+  height: 45vh;
   background-image: url("https://github.com/ndernovskaya/mq-diploma/blob/master/sources/img/basketballer_302.png?raw=true");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto auto;
-  z-index: 3;
-  top: 80px;
-  left: 0px;
+  background-size: auto 100%;
+  z-index: 2;
+  top: 50px;
+  left: 0;
   right: 0;
-  bottom: -100px;   
+  bottom: 0;   
 }
-.beactive, .beactive_art, .beactive_wrap {
+.beactive, .beactive_art, .beactive_wrap, .beactive_text {
   position: relative; 
+}
+.beactive_text {
+  box-sizing: border-box;
 }
 .beactive_pic {
   width: 100%;
@@ -258,10 +256,12 @@ p {
 .beactive h2 {
   padding-top: 2rem;
 }
-.number {
+.beactive_art h2::before {
+  content: '0'counter(myCounter);
+  counter-increment: myCounter;
   font-weight: 700;
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
   background-color: #5e42b0;
   font-size: 20px;
   text-align: center;
@@ -269,21 +269,36 @@ p {
   color: #ffffff;
   box-sizing: border-box;
   position: absolute;
-  bottom: -30px;
-  left: 30px;
+  top: -4rem;
+  left: 1.5rem;
+  z-index: 5;
+}
+.beactive_art h2::after {
+content: "";
+  align: left;
+  display: block;
+  margin-top: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1rem;
+  background-color: #8f7bc8;
+  height: 4px; 
+  position: absolute;
+  top: -1.5rem;
+  left: 3.5rem;
   z-index: 5;
 }
 .number::after {
   content: "";
   align: left;
-  display: block;
+  display: none;
   margin-top: 3px;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   background-color: #8f7bc8;
   height: 4px; 
-}
+}	
 .footer {
   background-image: url("https://github.com/ndernovskaya/mq-diploma/blob/master/sources/img/game_767.jpg?raw=true");
   background-repeat: no-repeat;
@@ -327,6 +342,12 @@ p {
   letter-spacing: 0.5px;
 }
 
+@media (min-width: 447px) and (max-width: 640px) {
+  .footballer::after {
+  background-image: url("https://github.com/ndernovskaya/Netology_diploma/blob/master/img/footballer_497.png?raw=true");
+    }
+}
+
 @media (min-width: 641px) {
  
   
@@ -337,64 +358,53 @@ p {
   h3 {
     font-size: 32px;
   }
-  
   .storebuttons {
 display: flex;
     max-width: 670px;
     margin: auto;
   }
-  
   .storebutton1 {
     max-width: 320px;
     font-size: 14px;
     border-radius: 70px;
-    padding: 20px 58px;
-    
+    padding: 20px 58px; 
   }
-  
   .icon {
   box-sizing: border-box;
   fill: #fff;
   width: 60px;
   margin-right: 10px;
 }
-  
   .icon1{
     width: 128px;
   }
-  
-   .footballer h2, .basketballer h2 {
+  .footballer::after {
+    background-position: right;
+    background-size: auto 100%;
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 100%;
+    padding: 0 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+  } 
+  .footballer h2, .basketballer h2 {
   padding-bottom: 20px; 
 }
-  
-  .section1 {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
   .section1 p {
-    max-width: 440px;
+    width: 50%;
+    max-width: 700px;
   }
- 
   .sport {
   width: 100%;
   margin-top: 90px;
     }
-  
   .section1 h3 {
     padding-top: 43px;
-  }
-  
-  .footballer::after{
-  position: absolute;
-  content: "";
-  border: 5px solid red;
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: cover;
-  z-index: 3; 
   } 
-  
   .download {
  width: 100%;
  font-size: 80px;
@@ -403,12 +413,13 @@ display: flex;
   width: 100%;
   font-size: 36px;
 }
+}
   
 @media (min-width: 641px) and (max-width: 960px) {
  
    h1 {
     font-size: 64px;
-    letter-spacing: 2px;
+    letter-spacing: 1;
   }
   
 .logo {
@@ -418,15 +429,9 @@ display: flex;
 }
   
   
-.footballer::after{
-  height: 585px;
-  width: 450px;
-  border: 5px solid red;
-  background-image: url("https://github.com/ndernovskaya/Netology_diploma/blob/master/img/footballer_497.png?raw=true");
-  top: 30px;
-  left: -130px;
-  right: 0;
-  bottom: 0;  
+.footballer::after {
+  height: 100%;
+  background-image: url("https://github.com/ndernovskaya/Netology_diploma/blob/master/img/footballer_566.png?raw=true");
   } 
 
  .basketballer::after {
@@ -438,12 +443,11 @@ display: flex;
   top: -10px;
   left: 50%;
   background-size: cover;
-  border: 3px solid red;
   z-index: 3; 
  }
   
   .list1,  .footballer h2 {
-   padding-left: 300px;
+   padding-left: 50%;
   }
   
   .list2, .basketballer h2 {
@@ -456,8 +460,7 @@ display: flex;
   width: 100%;
     }
   }
-  
-
+ 
 @media (min-width: 768px) and (max-width:1280px) {
   .top {
   background-image: url("https://github.com/ndernovskaya/Netology_diploma/blob/master/img/football_1280.jpg?raw=true");
@@ -466,26 +469,26 @@ display: flex;
   background-image: url("https://github.com/ndernovskaya/mq-diploma/blob/master/sources/img/game_1280.jpg?raw=true");
 }
   
-  .number {
-  width: 114px;
-  height: 114px;
-  padding-top: 33px;
-  padding-bottom: 33px;
+  .beactive_art h2::before {
+  width: 7rem;
+  height: 7rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  top: -6rem;
     }
-  .number::after {
-  content: "";
-  display: block;
-  margin-top: 3px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
-  background-color: #8f7bc8;
-  height: 4px; 
 
-  }
+ .beactive_art h2::after {
+
+  width: 1rem;
+  height: 4px; 
+  top: -2.5rem;
+  left: 4.5rem;
+  z-index: 5;
 }
 
-@media (min-width: 961px) and (max-width: 1980px){
+}
+
+@media (min-width: 961px) {
   
 h1 {
     font-size: 80px;
@@ -507,15 +510,9 @@ h1 {
    padding-left: 50%;
   }
 .footballer::after{
-  height: 600px;
-  width: 30%;
-  border: 5px solid red;
-  background-image: url("https://github.com/ndernovskaya/Netology_diploma/blob/master/img/footballer_566.png?raw=true");
-  background-size: cover;
-  top: 30px;
-  left: 0px;
-  right: 0;
-  bottom: 0;  
+  background-image: url("https://github.com/ndernovskaya/Netology_diploma/blob/master/img/footballer_566.png?raw=true"); 
+  top: 0;
+  left: 0;
   } 
 
  .basketballer::after {
@@ -526,9 +523,17 @@ h1 {
   top: -10px;
   left: 50%;
   background-size: cover;
-  border: 3px solid red;
   z-index: 3; 
  }
+  
+  .footballer h2, .list1 h3, .list1 p {
+    padding-right: 10%;
+  }
+  
+  .basketballer h2, .list2 h3, .list2 p {
+    padding-left: 10%;
+  }
+  
   
   .beactive_art {
     display: flex;
@@ -540,6 +545,26 @@ h1 {
   .beactive_art:nth-child(2n) {
     flex-direction: row-reverse;
 }
+ 
+  .beactive_art h2::before {
+   top: calc(30% - 3rem);
+  left: -3.5rem;
+}
+  
+  .beactive_art:nth-of-type(2n) h2::before {
+  left: calc(100% - 3.5rem);
+}
+  
+ .beactive_art h2::after { 
+  top: 31%;
+  left: -0.5rem;
+}
+  
+  .beactive_art:nth-of-type(2n) h2::after {
+  left: calc(100% - 0.5rem);
+}
+  
+  
   .beactive_wrap{
     max-width: 50%;
   }
@@ -549,20 +574,8 @@ h1 {
   
   .beactive_text {
     width: 50%;
-    padding: 40px;
+    padding: 5% 10%;
   }
- 
-  .number:nth-of-type(odd) {
-  top: calc(50% - 30px);
-  left: calc(100% - 40px);
-    
-  }
-  
-  .number:nth-of-type(2n){
-  left: 80px;
-  top: 100%;
-}
- 
   
   .footer_group {
     padding-top: 227px;
@@ -588,7 +601,36 @@ background-image: url("https://github.com/ndernovskaya/Netology_diploma/blob/mas
 }
   .footer {
   background-image: url("https://github.com/ndernovskaya/mq-diploma/blob/master/sources/img/game_1920.jpg?raw=true");
+  }
+  
+  .footballer::after {
+  background-image: url("https://github.com/ndernovskaya/Netology_diploma/blob/master/img/footballer_566.png?raw=true"); 
+  }
+    
+  .beactive_art h2::before {
+  width: 10rem;
+  height: 10rem;
+  padding: 3rem;
+  left: calc(-5rem);
+   
+    }
+  
+  .beactive_art:nth-of-type(2n) h2::before {
+  left: calc(100% - 5rem);
 }
   
+   .beactive_art h2::after { 
+  top: 35%;
 }
 
+ .number::after {
+  content: "";
+  display: none;
+  margin-top: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  background-color: #8f7bc8;
+  height: 4px; 
+ }
+}
