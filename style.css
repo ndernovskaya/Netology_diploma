@@ -28,7 +28,7 @@ body {
   -moz-appearance: none;
 }
 main, ol, li {
-	width: 100%;
+width: 100%;
 }
 a {
   text-decoration: none;
@@ -605,7 +605,6 @@ background-image: url("https://github.com/ndernovskaya/Netology_diploma/blob/mas
   
   .footballer::after {
   background-image: url("https://github.com/ndernovskaya/Netology_diploma/blob/master/img/footballer_566.png?raw=true"); 
-  }
     
   .beactive_art h2::before {
   width: 10rem;
