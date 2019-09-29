@@ -468,14 +468,18 @@ display: flex;
   .footer {
   background-image: url("https://github.com/ndernovskaya/mq-diploma/blob/master/sources/img/game_1280.jpg?raw=true");
 }
-  
-  .beactive_art h2::before {
+
+}
+
+@media (min-width: 768px) { 
+ 
+ .beactive_art h2::before {
   width: 7rem;
   height: 7rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   top: -6rem;
-    }
+ }
 
  .beactive_art h2::after {
 
@@ -485,9 +489,7 @@ display: flex;
   left: 4.5rem;
   z-index: 5;
 }
-
 }
-
 @media (min-width: 961px) {
   
 h1 {
