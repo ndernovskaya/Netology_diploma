@@ -42,6 +42,7 @@ a {
 h1 {
   font-size: 28px;
   margin: 0 auto;
+  display: inline-block;
 }
 h2 {
   color: #e7e7e7;
