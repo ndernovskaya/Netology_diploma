@@ -221,6 +221,7 @@ p {
 .footballer, .basketballer {
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 .footballer::after{
   position: absolute;
