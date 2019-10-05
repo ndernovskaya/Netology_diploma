@@ -19,6 +19,7 @@ body {
   min-width: 320px;
   max-width: 1960px;
   width: 100vw;
+  margin: 0 auto;
 }
 
 *{
