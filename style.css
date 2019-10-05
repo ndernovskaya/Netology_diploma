@@ -42,9 +42,15 @@ a {
 }
 h1 {
   font-size: 28px;
-  margin: 0 auto;
-  display: block;
+ 
+ 
 }
+.h1_wrap {
+display: block;
+border: 2px solid red;
+margin: 0 auto;
+}
+	
 h2 {
   color: #e7e7e7;
   text-transform: uppercase;
@@ -504,6 +510,7 @@ display: flex;
 h1 {
     font-size: 80px;
     letter-spacing: 1.2px;
+	max-width: 1546px;
   }
   
 .slogan2 {
